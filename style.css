@@ -353,10 +353,12 @@ section h2 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  overflow: hidden;
 }
 .followUs > img {
   width: 480px;
   height: 560px;
+  z-index: -5 !important;
 }
 .followDiv {
   display: flex;
@@ -507,6 +509,7 @@ footer .logo {
 .hidden {
   top: 80px;
 }
+
 @media (max-width: 1250px) {
   .followUs > img {
     width: 360px;
@@ -875,5 +878,9 @@ footer .logo {
   }
   footer {
     padding: 12px 40px;
+  }
+
+  .copyright a {
+    font-size: 14px;
   }
 }

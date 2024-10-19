@@ -575,4 +575,8 @@ footer .logo {
   .copyright a {
     font-size: 12px !important;
   }
+
+  main {
+    overflow: hidden;
+  }
 }

@@ -639,4 +639,10 @@ footer .logo {
     font-weight: 600;
     line-height: 30px; /* 125% */
   }
+  .copyright a {
+    font-size: 14px;
+  }
+  main {
+    overflow: hidden;
+  }
 }

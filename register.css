@@ -694,4 +694,13 @@ footer .logo {
   .copyright a {
     font-size: 12px !important;
   }
+  * {
+    border: solid black;
+  }
+  main {
+    overflow: hidden;
+  }
+  .rules {
+    overflow: hidden;
+  }
 }
