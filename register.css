@@ -16,6 +16,7 @@ header {
   padding: 0 40px;
   position: relative;
   z-index: 100;
+  overflow: hidden;
 }
 button {
   border-radius: 14px;
