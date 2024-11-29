@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-@import url("https://fonts.cdnfonts.com/css/lama-sans");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lama sans", sans-serif;
+  font-family: "Cairo", sans-serif !important;
   text-align: right;
 }
 body {
@@ -31,6 +31,9 @@ button {
   margin-right: 46px;
   cursor: pointer;
 }
+header button {
+  box-shadow: none;
+}
 button a {
   text-decoration: none;
   color: white;
@@ -42,6 +45,7 @@ button:hover {
 header ul {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
   gap: 40px;
   list-style-type: none;
 }
@@ -59,6 +63,12 @@ header .logo {
   width: 87.75px;
   height: 71.796px;
 }
+.logoLink {
+  display: block;
+  margin-left: auto;
+  width: 87.75px;
+  height: 71.796px;
+}
 .dawarat {
   text-decoration: underline;
 }
@@ -68,13 +78,6 @@ ul a:hover {
 .header {
   display: flex;
   align-items: center;
-}
-header .logo {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 67.75px;
-  height: 51.796px;
 }
 main {
   padding: 0 40px;
@@ -388,28 +391,29 @@ footer .logo {
     flex-direction: column-reverse;
     border-radius: 0px 0px var(--16, 16px) var(--16, 16px);
     border: 2px solid var(--strock-Menu, rgba(255, 255, 255, 0));
-    background: linear-gradient(
-      160deg,
-      rgba(229, 239, 255, 0.5) 0%,
-      rgba(183, 212, 255, 0.5) 23.22%,
-      rgba(183, 212, 255, 0.5) 63.74%,
-      rgba(229, 239, 255, 0.5) 98.83%
-    );
+    background: white;
     backdrop-filter: blur(25px);
     padding: 26px 20px;
     position: fixed;
     top: -800px;
     left: 20px;
-    transition: all ease-in-out 0.6s;
     z-index: 2;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   .header.tapped {
     top: 80px;
   }
   .header ul {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-bottom: 46px;
     gap: 54px;
+  }
+  header .logo {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 67.75px;
+    height: 51.796px;
   }
   .header button {
     margin: 0;
@@ -428,6 +432,7 @@ footer .logo {
     position: fixed;
     height: 70px;
     top: 0;
+    right: 0;
     left: 0;
   }
   main {
@@ -453,6 +458,7 @@ footer .logo {
   }
   .mainImg {
     margin-bottom: 36px;
+    width: 100%;
   }
   .line {
     display: none;
@@ -521,8 +527,11 @@ footer .logo {
 }
 @media (max-width: 600px) {
   body > * {
-    padding: 0 18px;
-    margin-bottom: 36px;
+    padding: 20px 18px 0 18px;
+    margin-bottom: 35px;
+  }
+  footer {
+    margin-bottom: 0 !important;
   }
   main aside h1 {
     text-align: center;

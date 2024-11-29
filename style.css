@@ -1,11 +1,10 @@
-@import url("https://fonts.cdnfonts.com/css/lama-sans");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lama sans", sans-serif;
+  font-family: "Cairo", sans-serif !important;
   text-align: right;
 }
 body {
@@ -32,6 +31,9 @@ button {
   margin-right: 46px;
   cursor: pointer;
 }
+header button {
+  box-shadow: none;
+}
 button a {
   text-decoration: none;
   color: white;
@@ -42,6 +44,7 @@ button:hover {
 }
 header ul {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 40px;
   list-style-type: none;
@@ -53,6 +56,12 @@ header ul a {
   cursor: pointer;
 }
 header .logo {
+  margin-left: auto;
+  width: 87.75px;
+  height: 71.796px;
+}
+.logoLink {
+  display: block;
   margin-left: auto;
   width: 87.75px;
   height: 71.796px;
@@ -74,7 +83,7 @@ main {
   margin: 96px 0;
 }
 main img {
-  width: 100%;
+  width: 90%;
 }
 main aside {
   display: flex;
@@ -527,26 +536,22 @@ footer .logo {
     flex-direction: column-reverse;
     border-radius: 0px 0px var(--16, 16px) var(--16, 16px);
     border: 2px solid var(--strock-Menu, rgba(255, 255, 255, 0));
-    background: linear-gradient(
-      160deg,
-      rgba(229, 239, 255, 0.5) 0%,
-      rgba(183, 212, 255, 0.5) 23.22%,
-      rgba(183, 212, 255, 0.5) 63.74%,
-      rgba(229, 239, 255, 0.5) 98.83%
-    );
+    background: white;
     backdrop-filter: blur(25px);
     padding: 26px 20px;
     position: fixed;
+    display: none;
     top: -800px;
     left: 20px;
-    transition: all ease-in-out 0.6s;
     z-index: 2;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   .header.tapped {
     top: 80px;
+    display: flex;
   }
   .header ul {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-bottom: 46px;
     gap: 54px;
   }
@@ -756,8 +761,14 @@ footer .logo {
 }
 @media (max-width: 500px) {
   body > * {
-    padding: 0 18px;
+    padding: 0px 18px 0 18px;
     margin-bottom: 36px;
+  }
+  footer {
+    margin-bottom: 0 !important;
+  }
+  main img {
+    width: 110%;
   }
   main aside h1 {
     text-align: center;
