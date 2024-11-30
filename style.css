@@ -26,7 +26,7 @@ button {
   );
   box-shadow: 0px 0px 20px 0px var(--Blue-400, #2e81ff);
   border: none;
-  padding: 14px 20px;
+  padding: 5px 15px;
   font-size: 24px;
   margin-right: 46px;
   cursor: pointer;
@@ -111,7 +111,7 @@ main aside p {
   align-items: center;
   justify-content: flex-end;
   gap: 26px;
-  z-index: -5;
+  z-index: 0;
 }
 .arrowBtn button {
   position: relative;
