@@ -356,7 +356,7 @@ footer .logo {
   .header ul {
     flex-direction: column-reverse;
     margin-bottom: 46px;
-    gap: 54px;
+    gap: 30px;
   }
   .header button {
     margin: 0;
